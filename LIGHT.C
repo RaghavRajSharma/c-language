@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<conio.h>
+#include<dos.h>
+#include<graphics.h>
+void main()
+{
+
+ int i;
+  textbackground(BLACK);
+  gotoxy(35,10);
+  printf("STOP");
+  gotoxy(35,12);
+  printf("WAIT");
+  gotoxy(36,14);
+  printf("GO");
+  for(i=5;i>=1;i--)
+  {
+   textcolor(WHITE);
+   gotoxy(36,8);
+   printf("0%d",i);
+   delay(700);
+   if(i==1)
+   textcolor(RED);
+  }
+  gotoxy(35,10);
+  cprintf("STOP");
+  delay(1000);
+  for(i=5;i>=1;i--)
+  {
+   textcolor(WHITE);
+   gotoxy(36,8);
+   printf("0%d",i);
+   delay(700);
+   if(i==1)
+   textcolor(YELLOW);
+  }
+  gotoxy(35,12);
+  cprintf("WAIT");
+  delay(1000);
+  for(i=5;i>=1;i--)
+  {
+   textcolor(WHITE);
+   gotoxy(36,8);
+   printf("0%d",i);
+   delay(700);
+   if(i==1)
+   textcolor(GREEN);
+  }
+  gotoxy(36,14);
+  cprintf("GO");
+  delay(1000);
+ getch();
+}
